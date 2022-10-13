@@ -1,4 +1,4 @@
-package 수학;
+package 브루트포스;
 import java.util.*;
 
 class 비만도 {
@@ -12,11 +12,12 @@ class 비만도 {
         System.out.println( " 몸무게 : " );
         float kg = scanner.nextFloat();
         System.out.println(solution.solution(name, cm, kg));
+        scanner.close();
     }
     String solution(String name, float cm, float kg) {
         String title = " ### 비만도 계산 ### ";
-        Float m = cm / 100;
-        Float bmi =  kg / (m * m) ;
+        float m = cm / 100;
+        float bmi =  kg / (m * m) ;
         String biman = "";
         if(bmi >= 35 ){biman = "고도비만";}
         else if(bmi >= 30.0){biman = "중도비만";}

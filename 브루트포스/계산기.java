@@ -1,4 +1,4 @@
-package 수학;
+package 브루트포스;
 import java.util.*;
 class Solution {
     public static void main(String[] args) {
@@ -11,6 +11,7 @@ class Solution {
         System.out.println("두번째 수:");
         int c = scanner.nextInt();
         System.out.println(solution.solution(a, b, c));
+        scanner.close();
     }
     String solution(int a, String b, int c) {
         String title = " ### 게산기 ### ";

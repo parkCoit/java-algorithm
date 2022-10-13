@@ -1,4 +1,4 @@
-package 수학;
+package 브루트포스;
 import java.util.*;
 /**
 국어. 영어, 수학점수를 입력받아서 학점을 출력하는 프로그램을 완성하시오.
@@ -35,6 +35,7 @@ class 성적표 {
         System.out.println(" 영어: ");
         int en = scanner.nextInt();
         System.out.println(solution.solution(name, ko, ma, en));
+        scanner.close();
     }
     String solution(String name, int ko, int ma, int en) {
         String title = " ### 성적표 ### ";
