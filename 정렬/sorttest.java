@@ -2,26 +2,34 @@ package 정렬;
 
 import java.util.Random;
 
-class sorttest {
+public class sorttest {
     public static void main(String[] args) {
-        new sorttest().solution();    
+        new sorttest().solution();
     }
     void solution(){
         int[] arr = createArray();
         arr = sortArray(arr);
         printArray(arr);
     }
-    int[] createArray(){
+    int[] createArray(){ 
         int[] arr = new int[10];
+        for(int i =0; i < arr.length;i++){
+            arr[i] = createRandomNumber();
+            for(int j = 0; j < i; j++){
+                if(arr[i] == arr[j]){i--;}
+            }
+        }
         return arr;
     }
     int createRandomNumber(){
-        return (int)(Math.random()*100)+1;
+        return (int)(Math.random()*10)+1;
     }
     int[] sortArray(int[] arr){
         return arr;
     }
     void printArray(int[] arr){
-
+        for(int i = 0; i < arr.length;i++){
+            System.out.print(arr[i]+"\t");
+        }
     }
-}
+} 
